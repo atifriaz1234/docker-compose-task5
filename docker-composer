@@ -1,0 +1,33 @@
+version: '4.8'
+
+services:
+  # Web Service using NGINX
+  web:
+    image: nginx:latest
+    container_name: web-service
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    networks:
+      - app-network
+    depends_on:
+      - database
+
+  # Database Service using MySQL 8
+  database:
+    image: mysql:8
+    container_name: mysql-database
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_123
+      MYSQL_DATABASE: myapp_database
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app-network
+    # No ports exposed to host for security
+
+# Custom bridge network
+networks:
+  app-network:
+    driver: bridge
