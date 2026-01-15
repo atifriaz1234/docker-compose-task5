@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Application Stack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .info {
+            background: #e8f5e9;
+padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .detail {
+            margin: 10px 0;
+            padding: 8px;
+            background: #f9f9f9;
+            border-left: 4px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Application Stack Information</h1>
+
+        <div class="info">
+            <div class="detail">
+                <strong>Name:</strong> Atif Riaz
+            </div>
+            <div class="detail">
+                <strong>Course:</strong> Dev-ops-batch21
+ </div>
+        </div>
+
+        <h2>Stack Components</h2>
+        <div class="detail">
+            <strong>Web Server:</strong> NGINX (latest)
+        </div>
+        <div class="detail">
+            <strong>Database:</strong> MySQL 8
+        </div>
+        <div class="detail">
+            <strong>Host Port:</strong> 8080
+        </div>
+        <div class="detail">
+            <strong>Container Port:</strong> 80
+        </div>
+
+        <h2>Network Configuration</h2>
+        <div class="detail">
+            <strong>Network Type:</strong> Custom Bridge Network (app-network)
+        </div>
+
+        <p>This application stack is running using Docker Compose with a custom network and persistent storage.</p>
+    </div>
+</body>
